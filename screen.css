@@ -1,0 +1,53 @@
+/* CSS Document for Screens */
+
+
+body{
+font-family: 'Slabo 27px', serif;
+font-size: 16px;    /* Enda stället där px används, 
+                    alla andra mått kommer utgå från denna */
+font-weight: normal; /* Tjocklek på texten */
+color:white;
+margin: 0;
+padding: 0;
+}
+
+
+/* Text */
+
+h1{
+    padding-left: 200px;
+    padding-top: 200px;
+    font-size: 2.8em;
+    font-weight: 600;
+} /* 1em = 1 times the base font. 16 alltså. */
+
+h2{
+    padding-left: 100px;
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+h3{
+     padding-left: 200px;
+    margin: 0 0 0.5em 0; /* tänk som klockan, upp, höger, ner, vänster*/
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+h4{
+    margin: 0 0 1.5em 0; /* tänk som klockan, upp, höger, ner, vänster*/
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Header */
+
+header {
+    text-align: left;
+    height: 100vh;
+    background: #cf0004 url(restaurant-owner-pos-system.jpg) no-repeat;
+    background-size: 100% auto;
+    position: relative; /* relative = any items that are positioned inside the header element is positoned in relation to the header element itself. */
+} 
+
