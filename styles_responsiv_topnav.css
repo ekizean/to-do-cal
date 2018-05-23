@@ -53,7 +53,7 @@
     top: 0;
   }
     
-  .topnav.responsive a {
+ .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
@@ -118,7 +118,6 @@
     border-radius: 12px;
     text-align: center;
     margin: 0 auto;
-    
 }
 
 .meny {
@@ -167,6 +166,3 @@
         text-align: center;
         padding-top: 3vh;
 }
-
-
-
