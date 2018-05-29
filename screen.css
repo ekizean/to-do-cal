@@ -113,11 +113,19 @@ header {
         padding-top: 7%
     }
     
+    .fa {
+        position: absolute;
+        bottom: 6%;
+        left: 24%;
+    }
+    
+        /*
     .fa{
         margin-top: 70px;
         margin-bottom: 50px;
-    }
+    } */ 
     
-    h3{
+      h3{
         margin: 210px 0 0.2em 0;
     }
+}
