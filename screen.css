@@ -1,6 +1,5 @@
 /* CSS Document for Screens */
 
-
 body{
     font-family: 'Slabo 27px', serif;
     font-size: 16px;    /* Enda stället där px används, 
@@ -10,10 +9,7 @@ body{
     margin: 0;
     padding: 0;
     border: 0px solid transparent;
-
-
 }
-
 
 /* Text */
 
