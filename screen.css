@@ -109,7 +109,8 @@ header {
     }
     
     h1{
-        padding-top: 210px;
+        padding-top: 190px;
+        margin-bottom: 5px;
     }
     
     .fa {
