@@ -66,13 +66,13 @@ header {
 .fa {
     margin-left: 130px;
     margin-top: 1.1em;
-    padding: 17px;
-    font-size: 30px;
+    padding-right: 20px;
     width: 1em;
     text-align: center;
     text-decoration: none;
-    border-radius: 50px;
-        
+    border-radius: 50px;  
+    color: white;
+    opacity: 0.9;
 }
 
 /* Add a hover effect if you want */
@@ -83,15 +83,13 @@ header {
 /* Set a specific color for each brand  */
 
 /* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
+.fa.fa-facebook-square{
+    font-size: 40px;
 }
 
-.fa-envelope{    
-    background-color: red;
-    margin-left: 0.9em;
-    color: white;
+.fa.fa-envelope {
+    font-size: 40px;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -116,7 +114,7 @@ header {
     .fa {
         position: absolute;
         bottom: 20px;
-        left: 22%;
+        left: 24%;
     }
     
         /*
