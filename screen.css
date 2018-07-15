@@ -51,7 +51,7 @@ h4{
 header {
     text-align: left;
     height: 100vh;
-    background-image: url(20171023_120537crop.jpg);
+    background-image: url(20180610_211355.jpg);
     background-repeat: no-repeat;
     background-color: black;
     /*background: #cf0004 url(20171023_120537crop.jpg) no-repeat;*/
@@ -95,7 +95,7 @@ header {
 @media only screen and (max-width: 640px) {
 
     header{
-        background-image: url(20171023_120537.jpg);
+        background-image: url(20180610_211355.jpg);
         background-size: 150% auto;
         background-position: -75px 0px;
         padding-top: 5px;
