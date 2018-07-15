@@ -95,10 +95,12 @@ header {
 @media only screen and (max-width: 640px) {
 
     header{
-        background-image: url(20180610_211355.jpg);
+        background-image: url(20180610_211355crop.jpg);
         background-size: 150% auto;
         background-position: -75px 0px;
         padding-top: 5px;
+        background-size: auto 100% ;
+
     }
     
     hgroup {
