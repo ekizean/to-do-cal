@@ -1,32 +1,119 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Coming soon</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
-        <style>
-        @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
-        </style>
-        
-        <!-- Add icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-        
 
-        
-	</head>
-	<body>
-            <header>
-                <hgroup>
-                    <h2>Trattoria Commedia <br>har upphört. 
-                        <br>Snart öppnar</h2>
-                    <h1>Brezza</h1>
-                    <h2 id="italiensk">Italiensk restaurang <br>på riktigt</h2>
-                </hgroup>
-                <div id="knappar" style="font-size:1.7em">
-                    <a href="https://www.facebook.com/Brezza-238323836937734/" class="fa fa-facebook-square" target="_blank"></a>
-                     <a href="mailto:kontakt@brezza.se" class="fa fa-envelope"></a>                    
+   <head>
+      <title>To-Do-Cal | a Drag n Drop To-Do Calendar</title>
+      <meta charset="utf-8">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+      <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
+      <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <!-- Bootstrap -->
+      <link href="bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet"/>
+      <script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script> 
+      <script src = "js/bootstrap.min.js"></script>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+
+       <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
+
+       <style>
+           .ui-widget-header p, .ui-widget-content p { margin: 0; }
+       </style>
+
+        <script>
+        $(document).ready(function() {
+                
+            //$("#myUL").sortable();
+            //$("#myUL").disableSelection();  
+            
+            $( "#schedulelist" ).droppable({
+                classes: {
+                    //"ui-droppable-active": "ui-state-active",
+                    //"ui-droppable-hover": "ui-state-hover"
+              }, drop: function( event, ui ) {
+                  //$( this ).addClass( "ui-state-highlight" );
+                  
+                  //Get position
+                  var p = ui.draggable;
+                  var offset = p.offset();
+                  
+                  //ui.draggable.detach().appendTo("#schedule");
+                  ui.draggable.appendTo("#schedulelist");
+
+                  //ui.draggable.addClass("absolute");
+
+                  //Set position
+                 //ui.draggable.offset({ top: offset.top, left: offset.left});              
+                } 
+            });  
+        });            
+       </script>
+       
+   </head>
+    
+   <body> 
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <div class="container">
+           <div class="row">
+
+            <div id="time" class="col-sm-1">  
+               <p id="p1">07:00</p>
+               <p>08:00</p>
+               <p>09:00</p>
+               <p>10:00</p>
+               <p>11:00</p>
+               <p>12:00</p>
+               <p>13:00</p>
+               <p>14:00</p>
+               <p>15:00</p>
+               <p>16:00</p>
+               <p>17:00</p>
+               <p>18:00</p>
+               <p>19:00</p>
+               <p>20:00</p>
+               <p>21:00</p>
+               <p>22:00</p>
+            </div>
+
+            <div class="col-sm-4" id="schedule">Schedule
+                <div class="droppable" id="slots" class="ui-widget-header">
+                    <ul id="schedulelist">
+                        <div class="ruta" id="ruta1"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div><div class="ruta"></div>
+                    </ul>
+                </div>     
+            </div>
+
+               <div class="col-sm-4" id="todo">
+                <div id="myDIV" class="header">
+                  <h2>To-Do:s</h2>
+                    <input type="text" id="myInput" placeholder="Event...">
+                  <span onclick="newElement()" class="addBtn">Add</span>
+                  <script>document.onkeydown = function (e) {
+                      var keyCode = e.keyCode;
+                      if(keyCode == 13) {
+                        newElement();
+                      }
+                  }
+                  </script>
                 </div>
-            </header>            
-	</body>
+
+                <div id="droppable" class="droppable" class="ui-widget-header">
+                    <ul id="myUL">
+
+                    </ul>                
+                </div>
+
+            </div>   
+        </div>
+
+      <script src="app.js"></script> <!-- Ska denna ligga efter jQuery script?-->
+      </div>
+   </body>
 </html>
