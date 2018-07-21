@@ -55,8 +55,8 @@ function newElement() {
 
     $("li").resizable({
       maxHeight: 500,
-      minHeight: 11.375,
-      grid: 11.375,
+      minHeight: 22.75,
+      grid: [0, 11.375],
       handles: 's, w', 
       start: function(event,ui){
       }
@@ -87,7 +87,7 @@ function newElement() {
        //Försöker skapa listelementen ovanpå varandra så att alla syns trots position: absolute 
     if (p.top == 0) {} 
     else {
-        var y2 = p.top + 45.5;
+        var y2 = p.top + 46.5;
         $(li).offset({top: y2 }); 
     }
     
