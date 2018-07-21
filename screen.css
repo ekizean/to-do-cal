@@ -1,5 +1,9 @@
+body {
+    background-color: black !important;
+}
+
 #todo{
-    background-color: #746c6c;
+    background-color: #c4c1c1;
     padding-top: 15px;
 }
 
@@ -41,8 +45,8 @@ li {
     padding: 5px 30px 8px 30px;
     background-color: aqua;
     font-size: 17px;
-    transition: 0.1s;
-    border: 1px solid #aaaaaa;
+    transition: 0.01s;
+    border: 0px solid #aaaaaa !important;
     width: 350px;
 
     /* make the list items unselectable */
@@ -61,12 +65,12 @@ li.checked {
     color: #fff;
     text-decoration: line-through;
 }
-
+    
 .close {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 9px 16px 9px 16px;
+    padding: 2px 9px 7px 9px;
 }
 
 .close:hover {
@@ -75,7 +79,7 @@ li.checked {
 }
 
 .header {
-    background-color: #f44336;
+    background-color: #534c4c;
     padding: 25px 40px;
     color: white;
 }
@@ -119,13 +123,17 @@ p {
     display: block;
     padding-top: 10px;
     padding-left:30px;
+    color: rgb(245, 245, 245);
 }
 
 #p1 {padding-top: 20px;}
 
 #schedule {
+    background-color: #534c4c;
     padding: 0px;
 }
 #time {
+    background-color: #534c4c;
     padding-right: 0px;
+    padding-left: 0px;
 }
