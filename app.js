@@ -11,13 +11,15 @@ for (i = 0; i < myNodelist.length; i++) {
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
-var i;
+var i; 
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
-    div.style.display = "none";
+    //div.style.display = "none";
+      $(div).detach();
   }
 }
+
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
@@ -76,18 +78,19 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
-      div.style.display = "none";
+      //div.style.display = "none";
+      $(div).detach();
+
     }
   }
     
        //Försöker skapa listelementen ovanpå varandra så att alla syns trots position: absolute 
     if (p.top == 0) {} 
     else {
-        var y2 = p.top + 46.5;
+        var y2 = p.top + 45.5;
         $(li).offset({top: y2 }); 
     }
     
