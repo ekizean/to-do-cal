@@ -46,6 +46,7 @@ function newElement() {
     li.classList.add("ui-widget-content");
     li.classList.add("draggable");
     li.classList.add("absolute");
+
         
   if (inputValue === '') {
     alert("You must write something!");
@@ -57,18 +58,16 @@ function newElement() {
 
     $("li").resizable({
       maxHeight: 500,
-      minHeight: 22.75,
-      grid: [0, 11.375],
-      handles: 's, w', 
-      start: function(event,ui){
-      }
+      minHeight: 12,
+      grid: [0, 12],
+      handles: "s"       
     });
 
     $("li").draggable({ 
         snap: ".droppable", 
         snapMode: "inner", 
         revert: "invalid",
-        grid: [ 400, 11.375 ],
+        grid: [ 400, 12],
         stack: ".ui-draggable",
         });
 
@@ -90,7 +89,7 @@ function newElement() {
        //Försöker skapa listelementen ovanpå varandra så att alla syns trots position: absolute 
     if (p.top == 0) {} 
     else {
-        var y2 = p.top + 45.5;
+        var y2 = p.top + 48;
         $(li).offset({top: y2 }); 
     }
     
