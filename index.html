@@ -27,31 +27,26 @@
        </style>
 
         <script>
-        $(document).ready(function() {
-                
-            //$("#myUL").sortable();
-            //$("#myUL").disableSelection();  
-            
+        $(document).ready(function() {            
             $( "#schedulelist" ).droppable({
                 classes: {
                     //"ui-droppable-active": "ui-state-active",
                     //"ui-droppable-hover": "ui-state-hover"
-              }, drop: function( event, ui ) {
-                  //$( this ).addClass( "ui-state-highlight" );
-                  
-                  //Get position
-                  var p = ui.draggable;
-                  var offset = p.offset();
-                  
-                  //ui.draggable.detach().appendTo("#schedule");
-                  ui.draggable.appendTo("#schedulelist");
-
-                  //ui.draggable.addClass("absolute");
-
-                  //Set position
-                 //ui.draggable.offset({ top: offset.top, left: offset.left});              
-                } 
-            });  
+              }, drop: function( event, ui ) {                
+                  //Get position 
+                
+                  /* Få resterande element i schedule att flytta uppåt när drar till schedule */
+                  var index = ui.draggable.index();      
+                  var i; 
+                  var myNodelist = document.getElementById("myUL").children;
+                  for (i = index +1 ; i < $('#myUL li').length; i++) {
+                      var p2 = $(myNodelist[i]).position();
+                      var y3 = p2.top;
+                      $(myNodelist[i]).offset({top: y3 - 48}); 
+                  }
+                  ui.draggable.detach().appendTo("#schedulelist");
+                }
+           });  
         });            
        </script>
        
@@ -142,7 +137,7 @@ function checkLoginState() {
                <div class="col-sm-4" id="todo">
                 <div id="myDIV" class="header">
                   <h3>To-Do:s</h3>
-                    <input type="text" id="myInput" placeholder="Event...">
+                    <input type="text" id="myInput" placeholder="Event..." autofocus>
                   <span onclick="newElement()" class="addBtn">Add</span>
                   <script>document.onkeydown = function (e) {
                       var keyCode = e.keyCode;
