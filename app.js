@@ -21,6 +21,12 @@ for (i = 0; i < close.length; i++) {
 }
 
 
+           
+
+
+
+
+
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -38,7 +44,7 @@ function newElement() {
   li.appendChild(t);
     
     //Get position av senast elementet för att kunna placera nästa under
-    var p = $("li:last").position(); 
+    var p = $("#myUL li:last").position(); 
         
     //Lägger till eget, så att nya element kan flyttas till schemat
     var uniq = 'id' + (new Date()).getTime();
@@ -60,7 +66,10 @@ function newElement() {
       maxHeight: 500,
       minHeight: 12,
       grid: [0, 12],
-      handles: "s"       
+      handles: "s",
+      create: function( event, ui ) {
+            $(".ui-resizable-s").css("cursor","ns-resize");
+        }
     });
 
     $("li").draggable({ 
@@ -79,15 +88,25 @@ function newElement() {
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      var div = this.parentElement;
-      //div.style.display = "none";
-      $(div).detach();
-
+        var div = this.parentElement;
+        var index = $(div).index();
+        var i;
+        var toDoElements = document.getElementById("myUL").children;
+        for(i=index+1; i<$('#myUL li').length; i++) {
+            var p3 = $(toDoElements[i]).position();
+            var y4=p3.top;
+            $(toDoElements[i]).offset({top: y4 -48});            
+        }      
+        $(div).detach();
     }
   }
     
        //Försöker skapa listelementen ovanpå varandra så att alla syns trots position: absolute 
-    if (p.top == 0) {} 
+    if (p.top == 0) {
+    } 
+    else if(p.top==undefined) {
+        
+    }
     else {
         var y2 = p.top + 48;
         $(li).offset({top: y2 }); 
