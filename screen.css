@@ -1,11 +1,17 @@
 body {
     background-color: black !important;
+    height: 100vh;
 }
 
 #todo{
     background-color: #807c7c;
     padding-top: 15px;
 }
+
+.row { /*
+    margin-left: -100px !important;
+    margin-right: -100px !important;
+*/ }
 
 #schedule .ruta  {
     width: 350px;
@@ -26,8 +32,6 @@ body {
     padding: 0px;
     list-style-type: none; 
 }
-
-
 
 #schedulelist > li {
     left: 0px !important;
@@ -104,7 +108,10 @@ input {
     font-size: 16px;
 }
 
-/* Style the "Add" button */
+input:focus, textarea:focus {
+    outline: none;
+}
+
 .addBtn {
     padding: 10px;
     width: 25%;
@@ -121,8 +128,6 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
-
-h3{} 
 
 p {
     font-size: 13px;
@@ -142,4 +147,16 @@ p {
     background-color: #413b3b;
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.ui-widget-header p, .ui-widget-content p { margin: 0; }
+
+@media only screen and (max-width: 640px) {
+    #schedule .ruta  {
+        width: 300px;
+    }
+    
+    #resizable { 
+        width: 300px;
+    }
 }
