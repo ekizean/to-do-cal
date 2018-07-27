@@ -48,7 +48,7 @@ function newElement() {
         document.getElementById("myUL").appendChild(li);
     }
     
-    document.getElementById("myInput").value = ""; //Nollställer rutan när man lagt till liksom
+    document.getElementById("myInput").value = "";
 
     $("li").resizable({
       maxHeight: 500,
